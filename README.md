@@ -28,7 +28,6 @@ This course provides graduate students with practical data analytics skills esse
 
 ---
 
-
 ## Getting Started
 
 ### Prerequisites
@@ -38,13 +37,15 @@ Before starting the course, ensure you have the following software installed:
 | Software | Download Link |
 |----------|---------------|
 | Anaconda | [anaconda.com/download](https://www.anaconda.com/download) |
+| Git | [git-scm.com](https://git-scm.com/) |
 | VS Code | [code.visualstudio.com](https://code.visualstudio.com/) |
 | Docker Desktop | [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/) |
-| Git | [git-scm.com](https://git-scm.com/) |
 | DBeaver | [dbeaver.io/download](https://dbeaver.io/download/) |
-| Google Cloud SDK | [cloud.google.com/sdk/docs/install](https://cloud.google.com/sdk/docs/install) |
 | Postman | [postman.com/downloads](https://www.postman.com/downloads/) |
 
+> **Note:** See the **Installation Guide** in the course materials for detailed setup instructions.
+
+---
 
 ## Course Schedule
 
@@ -52,11 +53,11 @@ Before starting the course, ensure you have the following software installed:
 |------|------|-------|--------------|
 | 1 | Jan 5 | Introduction & SQL Basics | A-1 Released |
 | 1 | Jan 7 | SQL Refresher - Joins, CTEs, Window Functions | Final Project Released |
-| 2 | Jan 12 | ETL Pipeline I - CSV/JSON Ingest | |
-| 2 | Jan 14 | ETL Pipeline II - APIs | **A-1 Due**, A-2 Released |
-| 3 | Jan 19 | ETL Tools - BigQuery | **Quiz 1** |
-| 3 | Jan 21 | Python Wrangling I | |
-| 4 | Jan 26 | Python Wrangling II | |
+| 2 | Jan 12 | ETL Pipeline I - CSV/JSON Ingest | Lab-1 Released |
+| 2 | Jan 14 | ETL Pipeline II - APIs & Automation | A-2 Released |
+| 3 | Jan 19 | ETL Tools - BigQuery | **Quiz 1**, ~~A-1 Due~~ |
+| 3 | Jan 21 | Python Wrangling I - Tidy Data, Types, Validation | |
+| 4 | Jan 26 | Python Wrangling II - Merges, Pivots, Analysis-Ready Tables | |
 | 4 | Jan 28 | Introduction to Data Analysis | **Quiz 2** |
 | 5 | Feb 2 | Data Cleaning I | **A-2 Due** |
 | 5 | Feb 4 | Data Cleaning II | |
@@ -81,14 +82,82 @@ Before starting the course, ensure you have the following software installed:
 - Window Functions (ROW_NUMBER, RANK, LAG, LEAD)
 - Data Contracts and validation
 
+### Lecture 3: ETL Pipeline I - Files and Foundations (Jan 12)
+- What is ETL? Extract, Transform, Load
+- Working with CSV files (pandas, validation)
+- Working with JSON files (nested structures, flattening)
+- Raw vs Cleaned data layers
+- Data lineage and documentation
+- Logging for ETL pipelines
+- Complete file-based ETL pipeline example
+
+### Lecture 4: ETL Pipeline II - APIs and Automation (Jan 14)
+- What is an API? REST API concepts
+- Making HTTP requests with Python
+- Understanding API parameters and authentication
+- Handling pagination in API responses
+- Rate limiting strategies (fixed delay, adaptive, token bucket)
+- Error handling and retry logic with exponential backoff
+- Logging for production pipelines
+- Idempotent pipeline design
+- Introduction to BigQuery
+- Building complete automated ETL scripts
+
+### Lecture 5: Python Wrangling I - Tidy Data, Types, and Validation (Jan 21)
+- Tidy data principles (Hadley Wickham)
+- Column typing and type coercion
+- Reshaping data: wide to long (pd.melt)
+- Missing data strategies (MCAR, MAR, MNAR)
+- Validation checks: ranges, nulls, keys
+- Building validation frameworks
+
+### Lecture 6: Python Wrangling II - Merges, Reshaping, and Analysis-Ready Tables (Jan 26)
+- Merging multiple data sources
+- Handling different key column names
+- Join types and validation
+- Advanced pivot and unpivot patterns
+- Building analysis-ready tables
+- Data contracts and lineage documentation
+
 ---
 
+## Labs
+
+### Lab 1: Loading Data into MySQL (Due: Jan 16)
+- Load CSV data (Food Nutrition dataset)
+- Clean and prepare data for database storage
+- Create MySQL table with proper schema
+- Insert data and verify with SQL queries
+- Practice basic SQL queries
+
+---
+
+## Supplementary Materials
+
+### SQL Lecture Notes
+Comprehensive notes covering:
+- Git and GitHub workflows (fork, stash, pull conflicts)
+- SQL fundamentals and case sensitivity
+- DDL and table creation
+- Primary keys and foreign keys
+- Table relationships and joins
+- Working with external data
+
+### Installation Guide
+Complete setup instructions for:
+- Anaconda and Jupyter
+- Git and GitHub (including SSH keys)
+- VS Code and extensions
+- Docker and MySQL container
+
+---
 
 ## Assessment
 
 | Component | Weight |
 |-----------|--------|
-| Assignments (2) + Labs (6) | 20%+15% |
+| Assignments (2) | 20% |
+| Labs (6) | 15% |
 | Group Project & Report | 30% |
 | Quizzes (3) | 30% |
 | Case Study and Reading | 2% |
@@ -101,12 +170,33 @@ Before starting the course, ensure you have the following software installed:
 | Item | Date |
 |------|------|
 | Teams Formed | Jan 07 |
-| Assignment 1 Due | Jan 14 |
+| Lab 1 Due | **Jan 16, 11:59 PM** |
+| Assignment 1 Due | ~~Jan 14~~ → **Jan 18, 11:59 PM** |
 | Quiz 1 | Jan 19 |
 | Quiz 2 | Jan 28 |
-| Assignment 2 Due | Feb 2 |
-| Quiz 3 | Feb 9 |
+| Assignment 2 Due | Feb 02 |
+| Quiz 3 | Feb 09 |
 | Final Presentations | Feb 11 |
+
+---
+
+## Assignments Overview
+
+### Assignment 1: SQL Access Layer (20 points)
+- ERD and schema documentation
+- SQL queries: joins, CTEs, window functions
+- Pivot/unpivot operations
+- Table contracts and analysis-ready views
+- **Due: ~~January 14~~ January 18, 11:59 PM**
+
+### Assignment 2: ETL Pipeline (20 points)
+- Pipeline architecture documentation
+- Extract data from Open-Meteo Weather API
+- Rate limiting and retry logic implementation
+- Data transformation and validation
+- Monthly/annual aggregations
+- Integration with crop production data
+- **Due: February 2**
 
 ---
 
@@ -114,8 +204,36 @@ Before starting the course, ensure you have the following software installed:
 
 - **Database:** MySQL 8.0, Google BigQuery
 - **Languages:** Python, SQL
-- **Tools:** Docker, Jupyter Notebooks, VS Code
-- **Libraries:** pandas, SQLAlchemy, pymysql, matplotlib, plotly
+- **Tools:** Docker, Jupyter Notebooks, VS Code, Git/GitHub
+- **Libraries:** pandas, SQLAlchemy, pymysql, mysql-connector-python, matplotlib, plotly, requests
+
+---
+
+## Repository Structure
+
+```
+FRE521D-Winter2026-UBC/
+├── README.md
+├── LICENSE
+├── Lectures/
+│   ├── Lecture_01_Introduction_SQL/
+│   ├── Lecture_02_SQL_Refresher/
+│   ├── Lecture_03_ETL_Pipeline_I/
+│   ├── Lecture_04_ETL_Pipeline_II/
+│   ├── Lecture_05_Python_Wrangling_I/
+│   └── Lecture_06_Python_Wrangling_II/
+├── Labs/
+│   └── Lab_01_Loading_Data_MySQL/
+├── Assignments/
+│   ├── A1_SQL_Access_Layer/
+│   └── A2_ETL_Pipeline/
+├── Notes/
+│   └── SQL_Lecture_Notes.md
+├── Data/
+│   └── (datasets for labs and assignments)
+└── Setup/
+    └── Installation_Guide.ipynb
+```
 
 ---
 
