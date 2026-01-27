@@ -19,10 +19,10 @@
 | **3** | Jan 19 | Mon | **ETL Tools** – BigQuery, Python automation scripts                                              | **Quiz 1**                      |
 |       | Jan 21 | Wed | **Python Wrangling I** – Tidy principles, typing, missingness, validation                        |                                 |
 | **4** | Jan 26 | Mon | **Python Wrangling II** – Merges, pivot/unpivot, analysis-ready tables                           |                                 |
-|       | Jan 28 | Wed | **Introduction to Data Analysis** – Decision questions, measures, summaries                      | **Quiz 2**                      |
-| **5** | Feb 2  | Mon | **Data Cleaning I** – Formats, types, keys, deduplication                                        | **A-2 Due (11:59 pm)**                     |
-|       | Feb 4  | Wed | **Data Cleaning II** – Outliers, validation rules, key integrity                                 |                                 |
-| **6** | Feb 9  | Mon | **Visualization I** – Matplotlib & Plotly, storytelling figures                                  | **Quiz 3**                      |
+|       | Jan 28 | Wed | **ETL Tools** – BigQuery, automation scripts, scheduling, monitoring                             | **Quiz 2**                |
+| **5** | Feb 2  | Mon | **Data Cleaning I** – European formats, date parsing, string normalization, deduplication        | **A-2 Due (11:59 pm)**, Lab 4   |
+|       | Feb 4  | Wed | **Data Cleaning II** – Outliers (IQR, Z-score), validation rules, quality scoring                |  Lab 5                              |
+| **6** | Feb 9  | Mon | **Visualization I** – Matplotlib, Plotly, time series, multi-panel figures, accessibility       | **Quiz 3**, Lab 6               |
 |       | Feb 11 | Wed | **Final Presentations**                                                                          | **Final Project Due**           |
 
 
